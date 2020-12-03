@@ -15,7 +15,7 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
 //redirecting to home page 
-function login() { 
+function home() { 
         window.location.href="index.html"; 
 }
 
@@ -31,7 +31,7 @@ function submit(){
     // creating user using firebase auth built-in method createUserWithEmailAndPassword()
     auth.createUserWithEmailAndPassword(email, password)
         .then(function(){ 
-            alert("Signed Up with "+email +", you can log in now!");
+            alert("Signed Up with "+email +", go to home page to log in!");
             // storing current user-id in variable 'id' 
             const id = auth.currentUser.uid;
 
