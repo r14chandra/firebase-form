@@ -8,17 +8,22 @@ var firebaseConfig = {
     messagingSenderId: "1087204700304",
     appId: "1:1087204700304:web:6b62305a3e35ccb3376815"
 };
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
-
+// retrieving u_id  from localStorage
 var id = localStorage.getItem('u_id');
 firebase.database().ref('User/'+id).once('value').then(
     function(snapshot){
+
+        //retrieving data from object 'snapshot' 
          var name = (snapshot.val && snapshot.val().name);
          var place = (snapshot.val && snapshot.val().place);
          var email = (snapshot.val && snapshot.val().email);
+
+         //setting values to corresponding ids of elements in info.html page
          document.getElementById('name').innerHTML = name;
          document.getElementById('place').innerHTML = place;
          document.getElementById('email').innerHTML = email;
@@ -28,5 +33,7 @@ firebase.database().ref('User/'+id).once('value').then(
 function signOut() {
     auth.signOut();
     alert("Signed Out");
+
+    //redirecting to home page
     window.location.replace("index.html");
 }
