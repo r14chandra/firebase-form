@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Information</title>
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+        <script src="info.js"></script>
+        <link rel="stylesheet" href="info.css">
+    </head>
+    <body>
+        <h1 style=text-align:center>Information Of the Current User</h1>
+        <p>Name of the  user is :<span id="name"></span></p>
+        <p>Place of Birth :<span id="place"></span></p>
+        <p>Email :<span id="email"></span></p>
+        <center><button value="signOut"  id="out" onClick="signOut()">SignOut</button>
+        <a href="index.html">Back to home</a></center>
+    </body>
+</html>

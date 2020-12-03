@@ -1,0 +1,17 @@
+h1{ 
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+button{
+    background-color:#4CAF50;
+    width: 7%;
+    padding: 9px 5px;
+    margin:10px 0px 0px 35px;
+    cursor:pointer;
+    border:none;
+    color:#ffffff;
+    font-size: 15px;
+    font-weight: bold;            
+}

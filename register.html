@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login and Registration form example</title>
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+        <script src="register.js"></script>
+        <link rel="stylesheet" type="text/css" href="register.css">
+    </head> 
+    <body>
+        <div id="container" > 
+            <table width="380" align="center" border="0">
+            <h2>Registration Form</h2>
+                <tr><td> Name :</td>
+				<td>
+                <input type="text" name="name" id="nm" value=""></td></tr> 
+                <tr><td>Place of birth :</td>
+				<td>
+			    <input type="text" name="place" id="pl"></td></tr>
+                <tr><td>Email :</td>
+				<td>
+                <input type="text" name="email" id="email"></td></tr>
+                <tr><td>Password :</td>
+                <td><input type="password" name="pass" id="password"></td></tr>
+                <tr><td><button  id="btn" onclick="submit()">Register</button></td>
+                <td><a href="index.html">Back to Home</a></td></tr>
+            </table>
+        </div> 
+    </body>
+</html>
