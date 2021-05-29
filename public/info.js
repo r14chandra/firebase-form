@@ -18,10 +18,11 @@ var id = localStorage.getItem('u_id');
 firebase.database().ref('User/'+id).once('value').then(
     function(snapshot){
 
-        //retrieving data from object 'snapshot' 
-         var name = (snapshot.val && snapshot.val().name);
-         var place = (snapshot.val && snapshot.val().place);
-         var email = (snapshot.val && snapshot.val().email);
+        //retrieving data from object 'snapshot'
+         let data = snapshot.val();
+         var name = data.name;//(snapshot.val && snapshot.val().name);
+         var place = data.place;//(snapshot.val && snapshot.val().place);
+         var email = data.email;//(snapshot.val && snapshot.val().email);
 
          //setting values to corresponding ids of elements in info.html page
          document.getElementById('name').innerHTML = name;
